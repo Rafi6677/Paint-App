@@ -22,13 +22,37 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:id="@+id/linearLayout">
         <Button
-                android:text="Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button2" android:layout_weight="1"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/blueColor_Button"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:background="@android:color/holo_blue_dark"/>
         <Button
-                android:text="Button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button3" android:layout_weight="1"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/greenColor_Button"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:background="@color/green"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yellowColor_Button"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:background="@color/yellow"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/redColor_Button"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:background="@color/red"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

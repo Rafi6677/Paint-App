@@ -10,7 +10,7 @@ import android.view.View
 class PaintView: View {
 
     companion object {
-        val BRUSH_SIZE: Int = 10
+        const val BRUSH_SIZE: Int = 10
         const val DEFAULT_COLOR = Color.RED
         const val DEFAULT_BACKGROUND_COLOR = Color.WHITE
         const val TOUCH_TOLERANCE = 4
@@ -46,7 +46,7 @@ class PaintView: View {
         paint.xfermode = null
         paint.alpha = 0xff
 
-        embossMaskFilter = EmbossMaskFilter(floatArrayOf(), 0.4f, 6f, 3.5f)
+        embossMaskFilter = EmbossMaskFilter(floatArrayOf(1f, 1f, 1f), 0.4f, 6f, 3.5f)
         blurMaskFilter = BlurMaskFilter(5f, BlurMaskFilter.Blur.NORMAL)
     }
 
@@ -81,6 +81,10 @@ class PaintView: View {
         paths.clear()
         normal()
         invalidate()
+    }
+
+    fun changeColor(color: Int) {
+        currentColor = color
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -146,7 +150,7 @@ class PaintView: View {
         val dy: Float = Math.abs(y - pointY)
 
         if (dx >= TOUCH_TOLERANCE || dy >= TOUCH_TOLERANCE) {
-            path!!.quadTo(pointX, pointY, (x + pointX) / 2, (y + pointY) / 20)
+            path!!.quadTo(pointX, pointY, (x + pointX) / 2, (y + pointY) / 2)
             pointX = x
             pointY = y
         }

@@ -1,7 +1,5 @@
 package com.example.paintapp
 
-import java.nio.file.Path
-
 class FingerPath {
 
     var color: Int = 0

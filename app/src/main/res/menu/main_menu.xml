@@ -4,25 +4,25 @@
     <item
             android:id="@+id/normal"
             app:showAsAction="never"
-            android:title="Normal"
+            android:title="Linia"
     />
 
     <item
             android:id="@+id/emboss"
             app:showAsAction="never"
-            android:title="Emboss"
+            android:title="Linia podkreślona"
     />
 
     <item
             android:id="@+id/blur"
             app:showAsAction="never"
-            android:title="Blur"
+            android:title="Linia rozmazana"
     />
 
     <item
             android:id="@+id/clear"
             app:showAsAction="never"
-            android:title="Clear"
+            android:title="Wyczyść wszystko"
     />
 
 </menu>
